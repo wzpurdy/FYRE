@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/fyre_bg.qm</file>
+        <file alias="de">locale/fyre_de.qm</file>
+        <file alias="en">locale/fyre_en.qm</file>
+        <file alias="es">locale/fyre_es.qm</file>
+        <file alias="fi">locale/fyre_fi.qm</file>
+        <file alias="fr">locale/fyre_fr.qm</file>
+        <file alias="it">locale/fyre_it.qm</file>
+        <file alias="ja">locale/fyre_ja.qm</file>
+        <file alias="pl">locale/fyre_pl.qm</file>
+        <file alias="pt">locale/fyre_pt.qm</file>
+        <file alias="ru">locale/fyre_ru.qm</file>
+        <file alias="sk">locale/fyre_sk.qm</file>
+        <file alias="sv">locale/fyre_sv.qm</file>
+        <file alias="vi">locale/fyre_vi.qm</file>
+        <file alias="zh_CN">locale/fyre_zh_CN.qm</file>
+        <file alias="zh_TW">locale/fyre_zh_TW.qm</file>
+    </qresource>
+</RCC>

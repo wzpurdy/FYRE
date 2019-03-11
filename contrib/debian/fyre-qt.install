@@ -1,0 +1,6 @@
+usr/local/bin/fyre-qt usr/bin
+share/pixmaps/fyre32.xpm usr/share/pixmaps
+share/pixmaps/fyre16.xpm usr/share/pixmaps
+share/pixmaps/fyre128.png usr/share/pixmaps
+debian/fyre-qt.desktop usr/share/applications
+debian/fyre-qt.protocol usr/share/kde4/services/

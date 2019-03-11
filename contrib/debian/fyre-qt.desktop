@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fyre
+Comment=Fyre P2P Cryptocurrency
+Comment[fr]=Fyre, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Fyre, eşten eşe kriptografik sanal para birimi
+Exec=fyre-qt %u
+Terminal=false
+Type=Application
+Icon=fyre128
+MimeType=x-scheme-handler/fyre;
+Categories=Office;Finance;

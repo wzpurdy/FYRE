@@ -1,0 +1,33 @@
+# /etc/conf.d/fyred: config file for /etc/init.d/fyred
+
+# Config file location
+#FYRED_CONFIGFILE="/etc/fyrecore/fyre.conf"
+
+# What directory to write pidfile to?  (created and owned by $FYRED_USER)
+#FYRED_PIDDIR="/var/run/fyred"
+
+# What filename to give the pidfile
+#FYRED_PIDFILE="${FYRED_PIDDIR}/fyred.pid"
+
+# Where to write fyred data (be mindful that the blockchain is large)
+#FYRED_DATADIR="/var/lib/fyred"
+
+# User and group to own fyred process
+#FYRED_USER="fyrecore"
+#FYRED_GROUP="fyrecore"
+
+# Path to fyred executable
+#FYRED_BIN="/usr/bin/fyred"
+
+# Nice value to run fyred under
+#FYRED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+FYRED_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for fyred to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+FYRED_SIGTERM_TIMEOUT=60

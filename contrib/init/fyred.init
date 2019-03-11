@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  fyred The Fyre Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: fyred
+# processname: fyred
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/fyred, see below
+if [ -f /etc/sysconfig/fyred ]; then
+        . /etc/sysconfig/fyred
+fi
+
+RETVAL=0
+
+prog=fyred
+# you can override the lockfile via FYRED_LOCKFILE in /etc/sysconfig/fyred
+lockfile=${FYRED_LOCKFILE-/var/lock/subsys/fyred}
+
+# fyred defaults to /usr/bin/fyred, override with FYRED_BIN
+fyred=${FYRED_BIN-/usr/bin/fyred}
+
+# fyred opts default to -disablewallet, override with FYRED_OPTS
+fyred_opts=${FYRED_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $fyred $fyred_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
